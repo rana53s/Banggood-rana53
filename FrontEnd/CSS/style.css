@@ -21,7 +21,7 @@ body {
 .form-control {
     margin-top:9px;
     margin-left: 50px;
-    border-top: 1px solid orange !important;
+    border-top: 1px solid tomato !important;
     border-top-left-radius: 5px !important;
     border-bottom-left-radius: 5px !important;
     border-top-right-radius: 0 !important;
@@ -29,8 +29,8 @@ body {
     box-shadow: none !important;
 }
 .input-group-text {
-    background: orange;
-    border: 1px solid orange;
+    background: tomato;
+    border: 1px solid tomato;
     margin: 10px 10px 3px 0;
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
@@ -123,12 +123,12 @@ body {
     }
 }
 
-/* =============== SSlider CSS ================ */
+/* =============== Slider CSS ================ */
 
 .slider {
     width: 55%;
     margin-left: 20%;
-    margin-right: 15%;
+    /* margin-right: 15%; */
     padding: 0 10px;
 }
 .carousal {
@@ -142,4 +142,46 @@ body {
         width: 100%;
         margin-left: 0;
     }
+}
+
+/* ========= Right Side( Register ) CSS ========= */
+.register {
+    background-color: #ffebe1;
+    border: 1px soild red;
+    margin-left: 78%;
+    width: 20%;
+    height: 60%;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+.upper button {
+    border-radius: 25px;
+    padding: 8px 5px;
+    margin: 10px;
+    margin-left: 30px;
+    padding-right: 15px;
+    font-weight: bold;;
+}
+.upper h6 {
+    font-weight: bold;
+}
+.lower {
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+}
+.lower h6 {
+    font-weight: bold;
+}
+.join {
+    color: #fff;
+    background-color: tomato;
+    border: none;
+    text-align: center;
+}
+.sign {
+    border: none;
+    background-color: #fff;
+    text-align: center;
 }
