@@ -7,17 +7,25 @@ body {
     font-family: sans-serif;
 }
 .top-nav-bar {
+    display: flex;
     height: 82px;
     top: 0;
-    position: sticky;
-    background: darkslategray;
+    /* position: sticky; */
+    background: #2d2d38;
     margin-bottom: 20px;
     border-bottom: 1px solid black;
-    z-index: 2;
+    /* z-index: 2; */
+    justify-content: space-between;
 }
 .logo {
     margin-left: 30px;
 }
+
+.search-logo {
+    display: inline-flex;
+    width: 60%;
+}
+
 .form-control {
     margin-top:9px;
     margin-left: 50px;
@@ -29,7 +37,7 @@ body {
     box-shadow: none !important;
 }
 .input-group-text {
-    background: tomato;
+    /* background: tomato; */
     border: 1px solid tomato;
     margin: 10px 10px 3px 0;
     border-top-left-radius: 0px !important;
@@ -40,7 +48,8 @@ body {
 }
 .search-box {
     display: inline-flex;
-    width: 70%;
+    justify-content: space-between;
+    width: 95%;
     height: 50px;
 }
 .fa-search{
@@ -69,6 +78,11 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
+/* .header {
+    display: grid;
+    grid-column: repeat(3, 30%);
+} */
 
 /* ---------------- Side-menu ------------ */
 .side-menu {
@@ -123,6 +137,8 @@ body {
     }
 }
 
+
+
 /* =============== Slider CSS ================ */
 
 .slider {
@@ -150,10 +166,10 @@ body {
     border: 1px soild red;
     margin-left: 78%;
     width: 20%;
-    height: 60%;
     font-weight: bold;
     text-align: center;
     padding: 5px;
+   
 }
 .upper button {
     border-radius: 25px;
