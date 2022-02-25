@@ -1,12 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/ec511ed51a.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="CSS/navbar.css">
+
     <title>Document</title>
-</head>
-<body>
-    <h1>Product   Page</h1>
-</body>
+    <style>
+
+      #container {
+        width: 100%;
+        height: 700px;
+      }
+
+      #cloth1 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #cloth2 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #cloth3 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #cloth4 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      p {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+   <div id="nav"></div>
+    <div id="container">
+      <div id="cloth1"></div>
+      <div id="cloth2"></div>
+      <div id="cloth3"></div>
+      <div id="cloth4"></div>
+    </div>
+  </body>
 </html>
+
+<script type="module">
+
+    import navbar from "./JS/navbar.js";
+   document.getElementById("nav").innerHTML=navbar();
+
+  // now we are getting data and appending data function for cloth1
+  async function getData() {
+    try {
+      let url = `https://sunilbaba.herokuapp.com/fashion/cloth1`;
+
+      let res = await fetch(url);
+      let data = await res.json();
+      showData(data);
+      console.log("telivisiondata", data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  getData();
+
+  function showData(data) {
+    data.forEach(function (el) {
+      let maindiv = document.getElementById("cloth1");
+      let div = document.createElement("div");
+      div.addEventListener("click", function (){
+        localStorage.setItem('cartCheckOut',JSON.stringify(el));
+        window.location.href="/products/cart"
+      })
+      maindiv.appendChild(div);
+
+      let img = document.createElement("img");
+      img.src = el.img;
+
+      let oprice = document.createElement("p");
+      oprice.innerHTML = "price" + el.Price;
+
+      let nprice = document.createElement("p");
+      nprice.innerHTML = el.endin;
+
+      let offer = document.createElement("p");
+      offer.innerHTML = "Sold" + el.sold;
+
+      div.append(img, oprice, nprice, offer);
+    });
+  }
+
+  // now we are getting data and appending data function for cloth2
+  async function getData2() {
+    try {
+      let url = `https://sunilbaba.herokuapp.com/fashion/cloth2`;
+
+      let res = await fetch(url);
+      let data = await res.json();
+      showData2(data);
+      console.log("telivisiondata", data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  getData2();
+
+  function showData2(data) {
+    data.forEach(function (el) {
+      let maindiv = document.getElementById("cloth2");
+      let div = document.createElement("div");
+      maindiv.appendChild(div);
+
+      let img = document.createElement("img");
+      img.src = el.img;
+
+      let oprice = document.createElement("p");
+      oprice.innerHTML = "price" + el.Price;
+
+      let nprice = document.createElement("p");
+      nprice.innerHTML = el.endin;
+
+      let offer = document.createElement("p");
+      offer.innerHTML = "Sold" + el.sold;
+
+      div.append(img, oprice, nprice, offer);
+    });
+  }
+
+  // now we are getting data and appending data function for cloth3
+  async function getData3() {
+    try {
+      let url = `https://sunilbaba.herokuapp.com/fashion/cloth3`;
+
+      let res = await fetch(url);
+      let data = await res.json();
+      showData3(data);
+      console.log("telivisiondata", data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  getData3();
+
+  function showData3(data) {
+    data.forEach(function (el) {
+      let maindiv = document.getElementById("cloth3");
+      let div = document.createElement("div");
+      maindiv.appendChild(div);
+
+      let img = document.createElement("img");
+      img.src = el.img;
+
+      let oprice = document.createElement("p");
+      oprice.innerHTML = "price" + el.Price;
+
+      let nprice = document.createElement("p");
+      nprice.innerHTML = el.endin;
+
+      let offer = document.createElement("p");
+      offer.innerHTML = "Sold" + el.sold;
+
+      div.append(img, oprice, nprice, offer);
+    });
+  }
+
+  // now we are getting data and appending data function for cloth4
+  async function getData4() {
+    try {
+      let url = `https://sunilbaba.herokuapp.com/fashion/cloth4`;
+
+      let res = await fetch(url);
+      let data = await res.json();
+      showData4(data);
+      console.log("telivisiondata", data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  getData4();
+
+  function showData4(data) {
+    data.forEach(function (el) {
+      let maindiv = document.getElementById("cloth4");
+      let div = document.createElement("div");
+      maindiv.appendChild(div);
+
+      let img = document.createElement("img");
+      img.src = el.img;
+
+      let oprice = document.createElement("p");
+      oprice.innerHTML = "price" + el.Price;
+
+      let nprice = document.createElement("p");
+      nprice.innerHTML = el.endin;
+
+      let offer = document.createElement("p");
+      offer.innerHTML = "Sold" + el.sold;
+
+      div.append(img, oprice, nprice, offer);
+    });
+  }
+
+  // you have to cahnge setting as per need in css and html dont change
+  // onmly set as per your need
+</script>

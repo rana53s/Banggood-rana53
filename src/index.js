@@ -1,11 +1,12 @@
 require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 const app = express();
 const connect = require("./configs/db.js");
 const { register, login, newToken } = require("./controllers/auth.controller");
 const passport = require("./configs/google-oauth");
 const productController = require("./controllers/product.controller");
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -36,8 +37,8 @@ app.get( '/auth/google/callback',
     (req, res) => {
         const { user } = req;
         const token = newToken(user);
-        // return res.send({ user, token });
-        return res.render("users/index.ejs", { user, token });
+        
+        res.render("users/index.ejs", { user, token });
     }
 );
 
