@@ -37,7 +37,7 @@ app.get( '/auth/google/callback',
         const { user } = req;
         const token = newToken(user);
         // return res.send({ user, token });
-        return res.render("users/signUp.ejs", { user, token });
+        return res.render("users/index.ejs", { user, token });
     }
 );
 
