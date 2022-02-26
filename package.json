@@ -1,0 +1,33 @@
+{
+  "name": "banggood-rana53",
+  "version": "1.0.0",
+  "description": "Banggood is a E-commerce website. Building this project on construct week of Unit 4 at Masai School",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rana53s/Banggood-rana53.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rana53s/Banggood-rana53/issues"
+  },
+  "homepage": "https://github.com/rana53s/Banggood-rana53#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.3",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "uuid": "^8.3.2"
+  }
+}
